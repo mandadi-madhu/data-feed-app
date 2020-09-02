@@ -1,0 +1,2 @@
+CurveType,CurveID,ObservationDate,Currency,interpType,extraptype,daycountConvention,CompoundingFrequency,Maturity1,Maturity2,Maturity3,Maturity4,Maturity5,Maturity6,Maturity7,Maturity8,Maturity9,Maturity10,Value1,Value2,Value3,Value4,Value5,Value6,Value7,Value8,Value9,Value10
+Yield,zero,2020/08/25,ALL,lin,near,ACT365FIXED,CONTINUOUS,31,92,184,273,365,730,1095,1462,1826,2191,0.02285232378505,0.02285040618767,0.02283030348592,0.02196173438297,0.02112456066521,0.03028440543695,0.03387952061346,0.03821534100461,0.04081672580937,0.04083588352224
