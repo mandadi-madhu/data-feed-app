@@ -1,5 +1,5 @@
 const express = require('express');
-const dbService = require('../dbServices/yieldService');
+const yieldRepository = require('../../../database/repositories');
 
 class YieldController {
     constructor() {
@@ -17,7 +17,7 @@ class YieldController {
     // POST
     saveYield(req, res) {
         const payload = { ...req.body };
-        const newRecord = await new dbService().createYield(payload);
+        const newRecord = await new yieldRepository().saveYield(payload);
 
         res.status(201).json({
             message: 'Successfully saved Yield data',
@@ -26,8 +26,10 @@ class YieldController {
     }
 
     listYield(req, res) {
-        res.status(201).json({
-            message: 'Successfully read Yield data'
+        const records = await new yieldRepository().getYield();
+        res.status(200).json({
+            message: 'Successfully read Yield data',
+            data = records
         });
     }
 }
