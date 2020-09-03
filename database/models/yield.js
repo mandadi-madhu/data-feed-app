@@ -1,4 +1,4 @@
-const mongoose = require('../connection');
+const { mongoose } = require('../connection');
 
 const yieldSchema = new mongoose.Schema(
     {
@@ -33,5 +33,5 @@ const yieldSchema = new mongoose.Schema(
     }
 );
 
-const Yield = mongoose.model('Yield', yieldSchema);
+const Yield = new mongoose.model('Yield', yieldSchema);
 module.exports = Yield;

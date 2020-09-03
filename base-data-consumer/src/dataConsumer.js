@@ -1,3 +1,5 @@
 const consumeUpstreamData = require('./services/upstreamDataConsumer');
 
-consumeUpstreamData();
+(async () => {
+    await consumeUpstreamData();
+})();

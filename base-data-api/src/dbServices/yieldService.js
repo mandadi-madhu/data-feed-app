@@ -5,5 +5,9 @@ class YieldDataService {
         const newDoc = await new yieldModel(payload).save();
         return newDoc;
     }
+
+    async getYieldData() {
+        const records = await new yieldModel().find({}).exec();
+    }
 }
 module.exports = YieldDataService;
